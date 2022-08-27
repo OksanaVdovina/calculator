@@ -19,22 +19,22 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/calculator/plus")
-    public String sumOfNumbers(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
+    public Number sumOfNumbers(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
         return calculatorService.sumOfNumbers(number1, number2);
     }
 
     @GetMapping(path = "/calculator/minus")
-    public String subtraction(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
+    public Number subtraction(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
         return calculatorService.subtraction(number1, number2);
     }
 
     @GetMapping(path = "/calculator/multiply")
-    public String multiply(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
+    public Number multiply(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
         return calculatorService.multiply(number1, number2);
     }
 
     @GetMapping(path = "/calculator/divide")
-    public String division(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
+    public Number division(@RequestParam(required = false, name = "num1") Integer number1, @RequestParam(required = false, name = "num2") Integer number2) {
         return calculatorService.division(number1, number2);
     }
 
